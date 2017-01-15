@@ -101,9 +101,9 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cs = null;
         try {
-            String[] cols = {"isbn", "title", "price"};
+            String[] cols = null;
             String[] params = {lotid.getText().toString()};
-            cs = db.query("produces", cols, "isbn = ?",
+            cs = db.query("produces", cols, "lotid = ?",
                     params, null, null, null, null);
             if (cs.moveToFirst()) {
                 type.setText(cs.getString(1));

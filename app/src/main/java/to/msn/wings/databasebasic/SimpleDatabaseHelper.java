@@ -27,7 +27,7 @@ public class SimpleDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE produces (" +
-                "isbn TEXT PRIMARY KEY, title TEXT, price INTEGER,  lotid INTEGER, number INTEGER,comsumer INTEGER,quality INTEGER,type INTEGER)");
+                "lotid INTEGER PRIMARY KEY, number INTEGER,comsumer INTEGER,quality TEXT,type TEXT)");
 
     }
 
@@ -62,7 +62,7 @@ public class SimpleDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int old_v, int new_v) {
-        db.execSQL("DROP TABLE IF EXISTS books");
+        db.execSQL("DROP TABLE IF EXISTS produces");
         onCreate(db);
     }
 
