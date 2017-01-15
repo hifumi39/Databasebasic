@@ -106,10 +106,10 @@ public class MainActivity extends AppCompatActivity {
             cs = db.query("produces", cols, "lotid = ?",
                     params, null, null, null, null);
             if (cs.moveToFirst()) {
-                type.setText(cs.getString(1));
-                quality.setText(cs.getString(2));
-                number.setText(cs.getString(3));
-                comsumer.setText(cs.getString(4));
+                type.setText(cs.getString(cs.getColumnIndex("type")));
+                quality.setText(cs.getString(cs.getColumnIndex("quality")));
+                number.setText(cs.getString(cs.getColumnIndex("number")));
+                comsumer.setText(cs.getString(cs.getColumnIndex("comsumer")));
             } else {
                 Toast.makeText(this, "データがありません。",
                         Toast.LENGTH_SHORT).show();
