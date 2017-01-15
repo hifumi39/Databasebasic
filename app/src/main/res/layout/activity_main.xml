@@ -44,10 +44,10 @@
                 android:id="@+id/tvIsbn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="品種" />
+                android:text="lotid" />
 
             <EditText
-                android:id="@+id/txtIsbn"
+                android:id="@+id/lotid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -63,10 +63,26 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="品種" />
+
+            <EditText
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="品質" />
 
             <EditText
-                android:id="@+id/txtTitle"
+                android:id="@+id/quality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -82,7 +98,7 @@
                 android:text="個数" />
 
             <EditText
-                android:id="@+id/txtPrice"
+                android:id="@+id/number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -98,7 +114,7 @@
                 android:text="顧客ID" />
 
             <EditText
-                android:id="@+id/kokyaku2"
+                android:id="@+id/comsumer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>

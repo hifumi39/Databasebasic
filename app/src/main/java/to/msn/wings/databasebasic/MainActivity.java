@@ -14,9 +14,11 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private SimpleDatabaseHelper helper = null;
-    private EditText txtIsbn = null;
-    private EditText txtTitle = null;
-    private EditText txtPrice = null;
+    private EditText lotid = null;
+    private EditText type = null;
+    private EditText quality = null;
+    private EditText number = null;
+    private EditText comsumer = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
         helper = new SimpleDatabaseHelper(this);
-        txtIsbn = (EditText) findViewById(R.id.txtIsbn);
-        txtTitle = (EditText) findViewById(R.id.txtTitle);
-        txtPrice = (EditText) findViewById(R.id.txtPrice);
+        lotid = (EditText) findViewById(R.id.lotid);
+        type = (EditText) findViewById(R.id.type);
+        quality = (EditText) findViewById(R.id.quality);
+        number = (EditText) findViewById(R.id.number);
+        comsumer = (EditText) findViewById(R.id.comsumer);
 
         Button btnnext = (Button)findViewById(R.id.text);
         if (btnnext == null) {
@@ -55,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Produce produce = new Produce();
 
         // TODO: データをセット
-        produce.setLotid(Integer.parseInt(txtIsbn.getText().toString()));
+        produce.setLotid(Integer.parseInt(lotid.getText().toString()));
 
         helper.insertProduce(produce);
     }
@@ -79,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
     public void onDelete(View view) {
         SQLiteDatabase db = helper.getWritableDatabase();
         try {
-            String[] params = {txtIsbn.getText().toString()};
-            db.delete("produces", "isbn = ?", params);
+            String[] params = {lotid.getText().toString()};
+            db.delete("produces", "lotid = ?", params);
             Toast.makeText(this, "データの削除に成功しました。",
                     Toast.LENGTH_SHORT).show();
         } finally {
@@ -93,12 +97,14 @@ public class MainActivity extends AppCompatActivity {
         Cursor cs = null;
         try {
             String[] cols = {"isbn", "title", "price"};
-            String[] params = {txtIsbn.getText().toString()};
+            String[] params = {lotid.getText().toString()};
             cs = db.query("produces", cols, "isbn = ?",
                     params, null, null, null, null);
             if (cs.moveToFirst()) {
-                txtTitle.setText(cs.getString(1));
-                txtPrice.setText(cs.getString(2));
+                type.setText(cs.getString(1));
+                quality.setText(cs.getString(2));
+                number.setText(cs.getString(3));
+                comsumer.setText(cs.getString(4));
             } else {
                 Toast.makeText(this, "データがありません。",
                         Toast.LENGTH_SHORT).show();
