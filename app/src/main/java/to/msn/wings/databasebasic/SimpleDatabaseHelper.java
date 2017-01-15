@@ -93,8 +93,8 @@ public class SimpleDatabaseHelper extends SQLiteOpenHelper {
                 produce.setLotid(cursor.getInt(cursor.getColumnIndex("lotid")));
                 produce.setNumber(cursor.getInt(cursor.getColumnIndex("number")));
                 produce.setComsumer(cursor.getInt(cursor.getColumnIndex("comsumer")));
-                produce.setQuality(cursor.getInt(cursor.getColumnIndex("quality")));
-                produce.setType(cursor.getInt(cursor.getColumnIndex("type")));
+                produce.setQuality(cursor.getString(cursor.getColumnIndex("quality")));
+                produce.setType(cursor.getString(cursor.getColumnIndex("type")));
 
                 produceList.add(produce);
             } while (cursor.moveToNext());

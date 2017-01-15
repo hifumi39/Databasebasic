@@ -68,7 +68,7 @@
 
             <EditText
                 android:id="@+id/type"
-                android:inputType="number"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -85,7 +85,7 @@
 
             <EditText
                 android:id="@+id/quality"
-                android:inputType="number"
+                android:inputType="text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>

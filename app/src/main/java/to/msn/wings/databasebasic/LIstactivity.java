@@ -65,14 +65,14 @@ public class LIstactivity extends AppCompatActivity {
             if (produce != null) {
                 TextView quality = (TextView)convertView.findViewById(R.id.quality);
                 if (quality != null) {
-                    quality.setText(Integer.toString(produce.getQuality()));
+                    quality.setText(produce.getQuality());
                 }
             }
 
             if (produce != null) {
                 TextView type = (TextView)convertView.findViewById(R.id.type);
                 if (type != null) {
-                    type.setText(Integer.toString(produce.getType()));
+                    type.setText(produce.getType());
                 }
             }
             Log.d("DEBUG",convertView.toString());

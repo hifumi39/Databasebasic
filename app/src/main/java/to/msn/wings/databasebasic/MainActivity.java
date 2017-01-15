@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         Produce produce = new Produce();
 
         produce.setLotid(Integer.parseInt(lotid.getText().toString()));
-        produce.setType(Integer.parseInt(type.getText().toString()));
-        produce.setQuality(Integer.parseInt(quality.getText().toString()));
+        produce.setType(type.getText().toString());
+        produce.setQuality(quality.getText().toString());
         produce.setNumber(Integer.parseInt(number.getText().toString()));
         produce.setComsumer(Integer.parseInt(comsumer.getText().toString()));
 

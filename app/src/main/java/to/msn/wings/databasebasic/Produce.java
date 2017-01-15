@@ -8,8 +8,8 @@ public class Produce {
     private int lotid;
     private int number;
     private int comsumer;
-    private int quality;
-    private int type;
+    private String quality;
+    private String type;
 
     public int getLotid() {
         return lotid;
@@ -35,19 +35,19 @@ public class Produce {
         this.comsumer = comsumer;
     }
 
-    public int getQuality() {
+    public String getQuality() {
         return quality;
     }
 
-    public void setQuality(int quality) {
+    public void setQuality(String quality) {
         this.quality = quality;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 }
