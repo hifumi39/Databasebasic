@@ -52,19 +52,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onSave(View view) {
-        SQLiteDatabase db = helper.getWritableDatabase();
-        try {
-            ContentValues cv = new ContentValues();
-            cv.put("isbn", txtIsbn.getText().toString());
-            cv.put("title", txtTitle.getText().toString());
-            cv.put("price", txtPrice.getText().toString());
-            //db.insert("books", null, cv);
-            db.insertWithOnConflict("produces", null, cv, SQLiteDatabase.CONFLICT_REPLACE);
-            Toast.makeText(this, "データの登録に成功しました。",
-                    Toast.LENGTH_SHORT).show();
-        } finally {
-            db.close();
-        }
+        Produce produce = new Produce();
+
+        // TODO: データをセット
+        produce.setLotid(Integer.parseInt(txtIsbn.getText().toString()));
+
+        helper.insertProduce(produce);
     }
 
     // updateメソッドを使う場合
