@@ -50,4 +50,19 @@ public class Produce {
     public void setType(String type) {
         this.type = type;
     }
+
+    public String toCSVLine() {
+        StringBuilder strBuilder = new StringBuilder();
+        strBuilder.append(lotid);
+        strBuilder.append(", ");
+        strBuilder.append(number);
+        strBuilder.append(", ");
+        strBuilder.append(comsumer);
+        strBuilder.append(", ");
+        strBuilder.append(quality);
+        strBuilder.append(", ");
+        strBuilder.append(type);
+        strBuilder.append(", ");
+        return strBuilder.toString();
+    }
 }
