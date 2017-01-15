@@ -17,3 +17,10 @@ proguard/
 .gradle
 app/build/
 .DS_Store
+
+.idea/vcs.xml
+.idea/gradle.xml
+.idea/misc.xml
+build/generated/mockable-android-24.jar
+build/intermediates/dex-cache/cache.xml
+
