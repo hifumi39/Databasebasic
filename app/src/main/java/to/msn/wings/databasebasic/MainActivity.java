@@ -58,10 +58,15 @@ public class MainActivity extends AppCompatActivity {
     public void onSave(View view) {
         Produce produce = new Produce();
 
-        // TODO: データをセット
         produce.setLotid(Integer.parseInt(lotid.getText().toString()));
+        produce.setType(Integer.parseInt(type.getText().toString()));
+        produce.setQuality(Integer.parseInt(quality.getText().toString()));
+        produce.setNumber(Integer.parseInt(number.getText().toString()));
+        produce.setComsumer(Integer.parseInt(comsumer.getText().toString()));
 
         helper.insertProduce(produce);
+
+        Toast.makeText(this, "データの登録に成功しました。", Toast.LENGTH_SHORT).show();
     }
 
     // updateメソッドを使う場合
