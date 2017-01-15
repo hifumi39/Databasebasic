@@ -48,6 +48,7 @@
 
             <EditText
                 android:id="@+id/lotid"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -67,6 +68,7 @@
 
             <EditText
                 android:id="@+id/type"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -83,6 +85,7 @@
 
             <EditText
                 android:id="@+id/quality"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -99,6 +102,7 @@
 
             <EditText
                 android:id="@+id/number"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
@@ -115,6 +119,7 @@
 
             <EditText
                 android:id="@+id/comsumer"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </TableRow>
